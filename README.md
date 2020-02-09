@@ -34,13 +34,57 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+    Adaptive uses static elements and adjusts to the viewport but beyond initial load does not respond to viewport changes.
+
+    Responsive uses percentages and other 'flexible' values to adjust to the viewport as soon as changes happen.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+    Mobile first lets you build from the smallest viewport up, while desktop first is the reverse.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+    Establishes the base size and allows us to use simple rem numbers to convert to pixels. 1.4rem will equal 14px, 2.4 will equal 24px.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+    Preprocessors remove a lot of the repeated typing you have to do in CSS. It really helps keep your code DRY. And because of that, its way easier to handle CSS as your files will be smaller and your code will be nested cleanly.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+    Nesting is my favorite. You're telling me I don't have to write:
+
+        .div {
+
+        }
+
+        .div:hover {
+
+        }
+
+        .div .span {
+
+        }
+        
+        ???
+
+
+        Instead it would look like this:
+
+
+        .div {
+            *Insert CSS styles*
+
+            &:hover {
+                *more styles*
+            }
+
+            &.span {
+                *even more!*
+            }
+        }
+
+        It's much cleaner and simpler.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
